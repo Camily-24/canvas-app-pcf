@@ -3,20 +3,30 @@
 {
 	"name": "PCF DevContainer",
 	"build": {
-		"dockerfile": "Dockerfile"
-		
-		
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local on arm64/Apple Silicon.
+		"args": {
+			"VARIANT": "16-bullseye"
+		}
 	},
+	
 	// Configure tool-specific properties.
-	"customizations": {
+	"customizations": 
+	{
+		"settings": 
+		{
+			"terminal.integrated.shell.windows": "powershell.exe"
+		},
 		// Configure properties specific to VS Code.
-		"vscode": {
+		"vscode": 
+		{
 			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
+			"extensions": 
+			[
 				"danish-naglekar.pcf-builder",
-				"microsoft-IsvExpTools.powerplatform-vscode",
-				"GitHub.copilot"
-
+				"microsoft-IsvExpTools.powerplatform-vscode"
 			]
 		}
 	},
