@@ -17,7 +17,7 @@
 	{
 		"settings": 
 		{
-			"terminal.integrated.shell.windows": "powershell.exe"
+			"terminal.integrated.shell.linux": "/bin/bash"
 		},
 		// Configure properties specific to VS Code.
 		"vscode": 

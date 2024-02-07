@@ -2,7 +2,8 @@
 
 # dependencies
 /node_modules
-
+/obj
+/out
 # generated directory
 **/generated
 
